@@ -3,10 +3,10 @@ import "./index.css"
 function Product({ name, category, img, price, id, handleClick }) {
   return (
     <div id="product">
-        <figure>
+        <figure id="productBackground">
       <img alt="Imagem do Produto " src={img} />
       </figure>
-      <div>
+      <div id="productsInfos">
         <h2 id="productName">{name}</h2>
         <p id="productCategory">{category}</p>
         <p id="productPrice">R${price}</p>
