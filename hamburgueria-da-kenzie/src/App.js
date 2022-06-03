@@ -12,6 +12,7 @@ function App() {
   const [currentSale, setCurrentSale] = useState([]);
   const [cartTotal, setCartTotal] = useState(0);
   const [itensCar, setItensCar] = useState(true);
+  const [results, setResults] = useState('');
 
   function showProducts(params) {}
   function handleClick(productId) {}
@@ -32,9 +33,11 @@ function App() {
       .catch((err) => console.log(err));
   }, []);
   console.log(products);
+
   return (
     <>
-     <Header/>
+     <Header filteredProducts={filteredProducts} setProducts={setProducts}  setResults={ setResults}/>
+          {results}
       <main>
         <section id="ProductsSection">
         <ProductList products={products} handleClick={handleClick} />

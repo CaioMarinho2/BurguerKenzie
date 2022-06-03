@@ -1,5 +1,20 @@
-#ProductsSection{
+#ProductsSection {
   display: flex;
   overflow-x: auto;
- margin-top: 20px;
+  margin-top: 20px;
+  padding-top: 20px;
+  height: 390px;
+}
+@media (min-width: 1374px) {
+  #ProductsSection {
+    flex-wrap: wrap;
+    width: 1200px;
+    height: 735px;
+    overflow: hidden;
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+  }
 }

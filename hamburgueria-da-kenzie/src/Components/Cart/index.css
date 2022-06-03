@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;700&family=M+PLUS+1+Code&family=Monoton&family=Nunito:wght@200;800&family=Press+Start+2P&family=Righteous&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;700&family=M+PLUS+1+Code&family=Monoton&family=Nunito:wght@200;800&family=Press+Start+2P&family=Righteous&display=swap");
 #CarrTitle {
   display: flex;
   background: #27ae60;
@@ -22,7 +22,7 @@
   background: #f5f5f5;
   border-radius: 0px 0px 5px 5px;
   height: 158px;
-  margin-bottom: 20px;
+ 
 }
 aside {
   margin-top: 25px;
@@ -33,11 +33,73 @@ aside {
 }
 
 #emptyCarr {
-  font-family: "Inter" ,sans-serif;
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
   color: #333333;
+}
+
+#addCarr {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  color: #828282;
+}
+
+#totalCarr {
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 14px;
+  color: #333333;
+  margin-left: 10px;
+}
+
+#totalNumberCarr{
+  font-family: 'Inter';
+  font-weight: 600;
+  font-size: 14px;
+  color: #828282;
+  margin-right: 10px;
+}
+
+#removeAllCarr {
+  width: 333px;
+  height: 60px;
+  background: #e0e0e0;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Inter';
+font-weight: 600;
+font-size: 16px;
+color: #828282;
+margin-right: 10px;
+
+margin-left: 3px;
+margin-bottom: 20px;
+cursor: pointer;
+}
+#infosCarr{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+#carrSubSection{
+ background-color: #f5f5f5 ;
+ width: 340px;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+}
+
+#division{
+  width: 310px;
+  height: 2px;
+  background: #E0E0E0;
+  margin-left: 15px;
+  margin-bottom: 21px;
 }
 
 @media (min-width: 398px) {
@@ -47,13 +109,22 @@ aside {
   #Carr {
     width: 387px;
   }
+  #carrSubSection{
+    width: 387px;
+  }
+  #removeAllCarr {
+    width: 347px;
+    margin-left: 20px;
+  }
+
+  #division{
+    width: 385px;
+margin-left: 0;
+  }
 }
 
-#addCarr{
-    
-font-family: 'Inter';
-font-weight: 400;
-font-size: 16px;
-text-align: center;
-color: #828282;
+@media (min-width: 1374px) {
+  aside {
+    justify-content:flex-start ;
+  }
 }

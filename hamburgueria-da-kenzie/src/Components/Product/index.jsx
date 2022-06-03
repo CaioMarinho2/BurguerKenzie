@@ -4,7 +4,7 @@ function Product({ name, category, img, price, id, handleClick }) {
   return (
     <div id="product">
         <figure id="productBackground">
-      <img alt="Imagem do Produto " src={img} />
+      <img alt="Imagem do Produto " src={img} id="ProductImg" />
       </figure>
       <div id="productsInfos">
         <h2 id="productName">{name}</h2>

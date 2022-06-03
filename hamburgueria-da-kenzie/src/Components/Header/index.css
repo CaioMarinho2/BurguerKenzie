@@ -10,3 +10,16 @@ align-items: center;
     margin-bottom: 24px;
     
 }
+
+@media (min-width: 1374px) {
+
+header{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+#logo{
+    margin-left: 110px;
+    margin-bottom: 0;
+}
+}

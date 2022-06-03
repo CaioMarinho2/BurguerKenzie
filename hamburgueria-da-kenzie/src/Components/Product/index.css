@@ -6,6 +6,11 @@
   width: 300px;
   height: 346px;
 }
+#product:hover{
+border: 2px solid #3F3F3F;
+ transform: scale(1.1);
+
+}
 #productName {
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -42,6 +47,7 @@
   color: #ffffff;
   cursor: pointer;
 }
+
 #productBackground {
   width: 300px;
   height: 150px;
@@ -50,6 +56,8 @@
   align-items: center;
   justify-content: center;
 }
+
+
 #productsInfos {
   width: 279px;
   height: 146.33px;
@@ -60,4 +68,8 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+}
+#ProductImg{
+  width: 170px;
+  height: 170px;
 }

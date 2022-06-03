@@ -20,12 +20,13 @@ function Cart({ currentSale,itensCar }) {
       <div id="Carr">
 
       </div>
-      <div>
-        <div>
-          <p>Total</p>
-          <p>R$ 40,00</p>
+      <div id="carrSubSection">
+        <span id="division"></span>
+        <div id="infosCarr">
+          <p id="totalCarr">Total</p>
+          <p id="totalNumberCarr">R$ 40,00</p>
         </div>
-        <button>Remover todos</button>
+        <button id="removeAllCarr">Remover todos</button>
       </div>
 
     </aside>

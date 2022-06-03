@@ -1,17 +1,40 @@
-import "./index.css"
+import "./index.css";
 
-function InputSearch() {
-    return(
-       <form id="searchBar" onSubmit={(event) => {
-        event.preventDefault();
-      }}>
-     <input type="text" id="search" placeholder="Digitar Pesquisa">
-     </input>
+import { useState } from "react";
 
-     <button type="submit" id="searchButton">
-         Pesquisar 
-     </button>
-       </form>
-    )
+function InputSearch({setProducts,filteredProducts, setResults}) {
+  const [filter, setFilter] = useState('');
+ 
+function filtrar() {
+  const filtrado = filteredProducts.filter((produto) => {
+    return  produto.category.toLowerCase().replace('s','').replace('í','i') === filter.toLowerCase().replace('s','').replace('í','i')|| produto.name.toLowerCase().replace('á','a').replace('s','') === filter.toLowerCase().replace('á','a').replace('s','')
+  });
+
+setProducts(filtrado)
 }
-export default InputSearch
+  return (
+    <form
+      id="searchBar"
+      onSubmit={(event) => {
+        event.preventDefault();
+        console.log(filter)
+
+
+        
+        setResults(<p id="resultsFor"> Resultados para: <p id="productSeacher"> {filter} </p> </p>)
+        filtrar()
+      }}
+    >
+      <input type="text" id="search" placeholder="Digitar Pesquisa" onChange={(event) =>{
+               console.log(event.target.value) 
+               setFilter(event.target.value) }}></input>
+
+      <button type="submit" id="searchButton"
+      
+      >
+        Pesquisar
+      </button>
+    </form>
+  );
+}
+export default InputSearch;
