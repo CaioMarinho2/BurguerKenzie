@@ -12,8 +12,25 @@
   font-size: 18px;
   color: #ffffff;
   padding-left: 20px;
+
 }
 #Carr {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 340px;
+  background: #f5f5f5;
+  border-radius: 0px 0px 5px 5px;
+  min-height: 158px;
+   padding-top: 15px ;
+    max-height: 300px; 
+   overflow-y: auto;
+  
+
+
+}
+#CarrEmptyAll {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -21,9 +38,12 @@
   width: 340px;
   background: #f5f5f5;
   border-radius: 0px 0px 5px 5px;
-  height: 158px;
+  min-height: 158px;
+   padding-top: 15px ;
  
+
 }
+
 aside {
   margin-top: 25px;
   display: flex;
@@ -107,6 +127,9 @@ cursor: pointer;
     width: 367px;
   }
   #Carr {
+    width: 387px;
+  }
+  #CarrEmptyAll{
     width: 387px;
   }
   #carrSubSection{

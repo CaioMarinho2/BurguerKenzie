@@ -5,24 +5,14 @@ import ProductList from "./Components/ProductsList";
 import Cart from "./Components/Cart";
 import Header from "./Components/Header/header";
 
-
 function App() {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [currentSale, setCurrentSale] = useState([]);
-  const [cartTotal, setCartTotal] = useState(0);
   const [itensCar, setItensCar] = useState(true);
-  const [results, setResults] = useState('');
-
-  function showProducts(params) {}
-  function handleClick(productId) {}
+  const [results, setResults] = useState("");
 
   
-  function RemoveAll() {
-    setItensCar(!itensCar);
-  }
-
-
   useEffect(() => {
     fetch("https://hamburgueria-kenzie-json-serve.herokuapp.com/products")
       .then((response) => response.json())
@@ -32,17 +22,51 @@ function App() {
       })
       .catch((err) => console.log(err));
   }, []);
-  console.log(products);
+  /*   console.log(products); */
 
+  console.log(currentSale);
+
+  function handleClick(productId) {
+    const addProductCar = products.filter(({ id }) => id === +productId);
+
+    return addProductCar;
+  }
+ 
+  function removerItem(id) {
+    const remove = currentSale.filter((item) => {
+      return item.id !== +id;
+    });
+   
+    setCurrentSale([...remove]);
+    if(remove.length===0){
+      setItensCar(true)
+    }
+  }
   return (
     <>
-     <Header filteredProducts={filteredProducts} setProducts={setProducts}  setResults={ setResults}/>
-          {results}
+      <Header
+        filteredProducts={filteredProducts}
+        setProducts={setProducts}
+        setResults={setResults}
+      />
+      {results}
       <main>
         <section id="ProductsSection">
-        <ProductList products={products} handleClick={handleClick} />
+          <ProductList
+            products={products}
+            handleClick={handleClick}
+            currentSale={currentSale}
+            setCurrentSale={setCurrentSale}
+            setItensCar={setItensCar}
+          />
         </section>
-        <Cart currentSale={currentSale} itensCar={itensCar}  />
+        <Cart
+          currentSale={currentSale}
+          itensCar={itensCar}
+          setCurrentSale={setCurrentSale}
+          setItensCar={setItensCar}
+          removerItem={ removerItem}
+        />
       </main>
     </>
   );

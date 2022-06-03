@@ -1,4 +1,4 @@
-#product {
+.product {
   margin-left: 20px;
   background: #ffffff;
   border: 2px solid #e0e0e0;
@@ -6,12 +6,12 @@
   width: 300px;
   height: 346px;
 }
-#product:hover{
+.product:hover{
 border: 2px solid #3F3F3F;
  transform: scale(1.1);
 
 }
-#productName {
+.productName {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -19,14 +19,14 @@ border: 2px solid #3F3F3F;
   color: #333333;
 }
 
-#productCategory {
+.productCategory {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-size: 14px;
   color: #828282;
 }
 
-#productPrice {
+.productPrice {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -34,7 +34,7 @@ border: 2px solid #3F3F3F;
   color: #27ae60;
 }
 
-#productButton {
+.productButton {
   width: 106px;
   height: 40px;
   background: #27ae60;
@@ -48,7 +48,7 @@ border: 2px solid #3F3F3F;
   cursor: pointer;
 }
 
-#productBackground {
+.productBackground {
   width: 300px;
   height: 150px;
   background: #f5f5f5;
@@ -58,7 +58,7 @@ border: 2px solid #3F3F3F;
 }
 
 
-#productsInfos {
+.productsInfos {
   width: 279px;
   height: 146.33px;
   margin-left: 21px;
@@ -69,7 +69,7 @@ border: 2px solid #3F3F3F;
   justify-content: space-between;
   align-items: flex-start;
 }
-#ProductImg{
+.ProductImg{
   width: 170px;
   height: 170px;
 }
